@@ -1,4 +1,4 @@
-# Churn Shield: Customer Retention System with Quantified ROI
+# Churn shield: Customer retention system with quantified ROI
 
 **The business question:** A telecom operator with 7,000+ customers doesn't know which ones are about to leave. Or how much that silence is costing them.
 
@@ -8,7 +8,7 @@ This project answers that question with data and turns the answer into a priorit
 
 ---
 
-## The Problem
+## The problem
 
 Churn isn't a technical problem. It's a revenue leak that accumulates silently.
 
@@ -29,9 +29,9 @@ The real challenge: **identify who's leaving, why, and whether the revenue they 
 
 ---
 
-## How It Works
+## How it works
 
-### Step 1 — Where Does the Money Leak?
+### Step 1 — Where does the money leak?
 
 Before any model, understand the structure of the problem. The Sankey diagram makes it immediately visible: **churn concentrates almost entirely on month-to-month contracts.** One-year and two-year customers barely move.
 
@@ -49,7 +49,7 @@ This phase builds business intuition before the model. A model trained on poorly
 
 ---
 
-### Step 3 — Model: Random Forest + Threshold Optimization
+### Step 3 — Model: Random Forest + Threshold optimization
 
 A Random Forest classifier assigns each customer a churn probability. The result isn't a binary label — it's a spectrum.
 
@@ -65,7 +65,7 @@ The confusion matrix confirms the model is calibrated for recall on churners (73
 
 ---
 
-### Step 4 — Who to Call First: The Decision Matrix
+### Step 4 — Who to call first: The decision Matrix
 
 Every at-risk customer is ranked by churn probability × monthly revenue. The output is a **prioritized action list**, not a prediction.
 
@@ -75,7 +75,7 @@ The vertical line at 0.4 marks the action threshold. Customers to the right and 
 
 ---
 
-### Step 5 — Explainability: Why Are They Leaving?
+### Step 5 — Explainability: Why are they leaving?
 
 A model that says "this customer will churn" without explaining why isn't actionable. SHAP analysis reveals the exact drivers across the entire customer base.
 
@@ -89,7 +89,7 @@ The dependence plot isolates monthly charges: there's a clear risk zone above �
 
 ---
 
-## Key Findings
+## Key findings
 
 - **Contract type is the strongest churn signal.** Month-to-month customers churn at dramatically higher rates. Retention offers should prioritize migration to longer terms.
 - **Monthly charges above €70 create a risk zone.** Price sensitivity spikes at this threshold, particularly combined with month-to-month contracts.
@@ -98,7 +98,7 @@ The dependence plot isolates monthly charges: there's a clear risk zone above �
 
 ---
 
-## Tech Stack
+## Tech stack
 
 | Tool | Used For |
 |---|---|
@@ -110,7 +110,7 @@ The dependence plot isolates monthly charges: there's a clear risk zone above �
 
 ---
 
-## Project Structure
+## Project structure
 
 ```
 telecom-churn-prediction-strategy/
@@ -121,7 +121,7 @@ telecom-churn-prediction-strategy/
 
 ---
 
-## About This Project
+## About this project
 
 Built as part of an applied data analysis practice combining domain expertise in telecom (20 years, including 8 years managing a €600M network-sharing agreement between Vodafone and Orange Spain) with hands-on Python and ML skills.
 
